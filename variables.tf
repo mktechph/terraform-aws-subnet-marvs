@@ -1,8 +1,3 @@
-variable "subnet_name" {
-  description = "The name of the Subnet."
-  type        = string
-}
-
 variable "subnet_vpc" {
   description = "The VPC ID."
   type        = string
