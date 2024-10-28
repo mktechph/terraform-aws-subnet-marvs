@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "igw" {
 
 resource "aws_nat_gateway" "nat_gw" {
   count         = var.subnet_nat_bool ? 1 : 0
-  allocation_id = aws_eip.eip.[count.index]
+  allocation_id = aws_eip.eip[count.index]
   subnet_id     = aws_subnet.subnet.id
 
   tags = var.nat_tags
