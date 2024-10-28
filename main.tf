@@ -27,5 +27,5 @@ resource "aws_nat_gateway" "nat_gw" {
 resource "aws_eip" "eip" {
   domain     = "vpc"
   tags       = var.eip_tags
-  depends_on = [aws_internet_gateway.igw]
+  depends_on = [aws_nat_gateway.nat_gw]
 }
