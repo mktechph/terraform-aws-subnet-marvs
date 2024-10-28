@@ -17,3 +17,15 @@ variable "subnet_tags" {
   description = "Tags for the Resource Group."
   type        = map(string)
 }
+
+variable "subnet_public_bool" {
+  description = "Create and attach Internet Gateway? (Public Subnet)"
+  type        = bool
+  default     = false
+}
+
+variable "igw_tags" {
+  description = "Tags for the Internet Gateway."
+  type        = map(string)
+  default     = null
+}
