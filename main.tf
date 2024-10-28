@@ -25,7 +25,7 @@ resource "aws_nat_gateway" "nat_gw" {
 }
 
 resource "aws_eip" "eip" {
-  domain     = "vpc"
-  tags       = var.eip_tags
-  depends_on = [aws_nat_gateway.nat_gw]
+  count  = var.subnet_nat_bool ? 1 : 0
+  domain = "vpc"
+  tags   = var.eip_tags
 }
