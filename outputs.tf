@@ -15,5 +15,5 @@ output "outputs_nat_gateway_id" {
 }
 
 output "outputs_eip_id" {
-  value = var.subnet_nat_bool ? aws_eip.eip.id : null
+  value = var.subnet_nat_bool ? aws_eip.eip[0].id : null
 }
