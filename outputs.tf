@@ -15,5 +15,5 @@ output "outputs_nat_gateway_id" {
 }
 
 output "outputs_eip_id" {
-  value = aws_eip.eip[count.index].id
+  value = aws_eip.eip.id
 }
