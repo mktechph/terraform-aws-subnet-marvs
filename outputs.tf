@@ -7,13 +7,13 @@ output "outputs_subnet_az" {
 }
 
 output "outputs_internet_gateway_id" {
-  value = aws_internet_gateway.igw.id
+  value = aws_internet_gateway.igw[count.index].id
 }
 
 output "outputs_nat_gateway_id" {
-  value = aws_nat_gateway.nat_gw.id
+  value = aws_nat_gateway.nat_gw[count.index].id
 }
 
 output "outputs_eip_id" {
-  value = aws_eip.eip.id
+  value = aws_eip.eip[count.index].id
 }
